@@ -1,0 +1,6 @@
+Obwody współbieżne
+
+Obwody boolowskie reprezentują wyrażenia boolowskie przy pomocy grafów, np. wyrażenie x∧(x∨¬y)∧(z∨y) może być przedstawione za pomocą drzewa.
+Zwyczajowo obliczenia boolowskie są wyliczane od lewej do prawej, zatem w wyrażeniu x∧y najpierw wyliczamy wartość x a następnie wartość y. Tak zwane leniwe wyliczanie (lazy evaluation) może pominąć wyliczenie części podwyrażeń, jeśli wartość już obliczonych pozwala ustalić wartość całego wyrażenia. Na przykład wyrażenie true∨x nie musi wyliczać wartości x by poznać wartość całego wyrażenia, które wylicza się do true. Zwróćmy uwagę, że jeśli wyrażenia nie generują efektów ubocznych to kolejność wyliczania podwyrażeń nie powinna wpływać na wartość całego wyrażenia, więc wyliczanie wartości podwyrażeń może odbywać się współbieżnie.
+
+Waszym zadaniem jest implementacja programu pozwalającego na współbieżne wyliczanie wartości wyrażeń boolowskich. Program powinien pozwalać na równoczesne wyliczanie wielu wyrażeń i wyliczać wartości pojedynczych wyrażeń współbieżnie.
